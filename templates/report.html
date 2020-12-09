@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Search</title>
+    <style>
+      .wrapper {
+            display: grid;
+            place-items: center;
+            min-height: 5vh;
+      }
+        section {
+          display: grid;
+          gap: 20px;
+          place-items: center;
+          grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>검색 결과</h1>
+      <h3>{{searchingBy}} 관련 {{resultsNumber}}개의 결과를 찾았습니다.</h3>
+      <a href="/export?word={{searchingBy}}">Export to CSV</a>
+    </div>
+    <section>
+      <h4>공고명</h4>
+      <h4>회사</h4>
+      <h4>위치</h4>
+      <h4>Link</h4>
+      {% for job in jobs %}
+        <span>{{job.title}}</span>
+        <span>{{job.company}}</span>
+        <span>{{job.location}}</span>
+        <a href="{{job.link}}" target="_blank">Apply</a>
+      {% endfor %}
+    <section>
+  </body>
+</html>

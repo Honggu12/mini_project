@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IT Job Search</title>
+    <style>
+        body {
+            background: url(https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg); 
+            background-size: length 480;
+            }
+        .wrapper {
+            display: grid;
+            place-items: center;
+            min-height: 30vh;
+            font-size: 36px;
+            font-weight: bold;
+            color: pink;
+            text-shadow: 2px 2px 2px gray;
+            margin: 100px 0px;
+            }
+        
+        input { width: 100%; 
+                padding: 10px 20px;
+                margin: 5px 0; 
+                box-sizing: border-box; 
+                }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>IT Job Search</h1>
+      <form action="/report" method="get">
+        <input placeholder='      프로그래밍 언어 or IT 기술 입력' required name="word" /><button>검색</button>
+      </form>
+    </div>
+  </body>
+</html>
